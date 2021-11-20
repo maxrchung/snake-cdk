@@ -3,8 +3,6 @@ import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
 import { SnakeCdkStack } from '../lib/snake-cdk-stack';
 
-console.log(process.env.PERSONAL_ACCESS_TOKEN);
-
 const app = new cdk.App();
 new SnakeCdkStack(app, 'SnakeCdkStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
