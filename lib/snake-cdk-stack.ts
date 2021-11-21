@@ -19,6 +19,8 @@ export class SnakeCdkStack extends cdk.Stack {
           phases: {
             preBuild: {
               commands: [
+                // Some packages are failing to install because amplify's default node version is too old
+                'nvm install 12',
                 'yarn'
               ]
             },
