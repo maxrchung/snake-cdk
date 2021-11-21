@@ -17,7 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - run: 'yarn'
+      - run: 'npm install'
 
       - name: cdk synth
         uses: youyo/aws-cdk-github-actions@v2
