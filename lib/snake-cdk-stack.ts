@@ -7,7 +7,7 @@ export class SnakeCdkStack extends cdk.Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    new amplify.App(this, 'snake', {
+    const amplifyApp = new amplify.App(this, 'snake', {
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
         owner: 'maxrchung',
         repository: 'snake',
@@ -42,5 +42,6 @@ export class SnakeCdkStack extends cdk.Stack {
         }
       })
     });
+    amplifyApp.addBranch('main');
   }
 }
