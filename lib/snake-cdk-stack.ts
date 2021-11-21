@@ -45,5 +45,7 @@ export class SnakeCdkStack extends cdk.Stack {
       })
     });
     amplifyApp.addBranch('main');
+    amplifyApp.addEnvironment('START_TEXT', process.env.START_TEXT || '');
+    amplifyApp.addEnvironment('END_TEXT', process.env.END_TEXT || '');
   }
 }
