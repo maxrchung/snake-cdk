@@ -31,7 +31,7 @@ export class SnakeCdkStack extends cdk.Stack {
             }
           },
           artifacts: {
-            baseDirectory: 'public',
+            baseDirectory: 'dist',
             files: [
               '**/*'
             ]
